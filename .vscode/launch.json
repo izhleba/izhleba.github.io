@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Convert CV for RenderCV",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/cv_for_rendercv.py",
+            "args": [
+                "--source",
+                "_data/cv.yml",
+                "--output",
+                "_data/.cv_rendercv.yml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
