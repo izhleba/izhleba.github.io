@@ -67,7 +67,7 @@ cv:
         end_date: 2019-10
         summary: Led a software development team building data infrastructure for real-time analytics and machine learning.
         highlights:
-          - Developed an analytical data warehouse and data pipelines using Python, Scala, Greenplum and Postgres.
+          - Developed an analytical data warehouse and data pipelines using Python, Scala, and Postgres.
           - Built infrastructure for real-time analytics and machine learning with Scala and Akka.
           - Optimized marketing purchases with machine learning algorithms in Python.
           - Promoted a data-driven culture via lectures, presentations and workshops.
