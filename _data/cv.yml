@@ -99,7 +99,7 @@ cv:
     Skills:
       - name: AI & Machine Learning
         icon: fa-solid fa-brain
-        keywords: "Applied AI, Generative AI, AI Avatars, Text-to-Video, NLP, Machine Learning"
+        keywords: "Applied AI, Generative AI, Neural Networks, Deep Learning, AI Avatars, Text-to-Video, NLP, Machine Learning"
       - name: Leadership
         icon: fa-solid fa-people-group
         keywords: "R&D Management, Team Building, Mentoring, Technical Strategy, Cross-functional Collaboration, Customer Development"
@@ -108,7 +108,7 @@ cv:
         keywords: "Data Warehousing, Data Pipelines, Real-time Analytics, PostgreSQL, Greenplum"
       - name: Programming
         icon: fa-solid fa-code
-        keywords: "Python, Scala, Java, Akka, SPARQL"
+        keywords: "Python, PyTorch, Scala, Java, Akka, SPARQL"
 
     Languages:
       - name: English
