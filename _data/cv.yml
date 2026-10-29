@@ -16,7 +16,6 @@ cv:
     Experience:
       - company: Panopto
         position: Head of AI Research
-        location: Barcelona, Spain
         start_date: 2024-11
         end_date: present
         summary: Lead AI research to drive innovation and keep Panopto's technology at the leading edge.
@@ -28,7 +27,6 @@ cv:
 
       - company: Elai.io
         position: Chief R&D Officer (Co-founder)
-        location: Barcelona, Spain
         start_date: 2021-05
         end_date: 2024-12
         summary: Led research and development of AI video avatar technology - a text-to-video platform for fast and accessible creation of e-learning content.
@@ -39,7 +37,6 @@ cv:
 
       - company: Eidolon
         position: Head of Analytics
-        location: Minsk, Belarus
         start_date: 2021-01
         end_date: 2022-02
         summary: Led development of a comprehensive analytics platform to enhance data-driven decision-making for mobile games.
@@ -51,7 +48,6 @@ cv:
 
       - company: DataSpike
         position: Technical Lead (Co-founder)
-        location: Belarus
         start_date: 2019-10
         end_date: 2021-01
         summary: Led technical development of core machine learning systems and infrastructure, delivering NLP-driven solutions that improved operational efficiency for financial institutions in AML and KYC processes.
@@ -62,7 +58,6 @@ cv:
 
       - company: Quadcode
         position: Software Development (Data Engineer) Team Lead
-        location: Saint Petersburg, Russia
         start_date: 2017-05
         end_date: 2019-10
         summary: Led a software development team building data infrastructure for real-time analytics and machine learning.
@@ -74,7 +69,6 @@ cv:
 
       - company: Ice Owl
         position: Software Developer
-        location: Krasnoyarsk, Russia
         start_date: 2010-10
         end_date: 2017-04
         summary: Developed and optimized server-side software and game logic for multiplayer social games.
