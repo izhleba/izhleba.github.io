@@ -29,3 +29,24 @@ Before that, I co-founded [Elai.io](https://elai.io/) and served as its Chief R&
 I enjoy the full path from research to production: choosing the right problems, building and mentoring research and engineering teams, and shipping AI that creates measurable business value. My interests include generative AI for video and avatars, NLP, and data-driven product development.
 
 I'm currently open to **Head of AI / Applied AI Lead / Staff Research Engineer** roles and R&D leadership positions. Please feel free to get in touch!
+
+{% assign featured = site.projects | where: "featured", true | first %}
+{% if featured %}
+<h2 class="mt-4">Featured project</h2>
+<div class="card hoverable mb-4" style="position: relative; display: flex; flex-direction: row; flex-wrap: wrap; overflow: hidden;">
+  {% if featured.youtube_id %}
+  <div style="flex: 1 1 280px; min-height: 180px;">
+    <img src="https://img.youtube.com/vi/{{ featured.youtube_id }}/hqdefault.jpg" alt="Video preview: {{ featured.title }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+  </div>
+  {% endif %}
+  <div class="card-body" style="flex: 2 1 340px;">
+    <h3 class="card-title"><a href="{{ featured.url | relative_url }}" style="position: static;">{{ featured.title }}</a></h3>
+    <p class="card-text"><strong>Elai</strong> &middot; Co-Founder / Principal Engineer / R&amp;D Lead</p>
+    <p class="card-text">Led hands-on R&amp;D of neural systems for speech-driven facial animation and realistic talking-head video generation.</p>
+    <p class="card-text">Tackled expressive motion modeling, lip-sync evaluation and real-time neural rendering. Built production ML systems and led a small engineering team, combining model research with architecture and performance optimization.</p>
+    <p class="card-text"><strong>Key results:</strong> 300K+ avatar videos generated on the platform (2024-2026), production deployment of the developed models, and a real-time avatar MVP achieving 25+ FPS.</p>
+    <p class="card-text"><small>Focus: Generative AI &middot; Neural Rendering &middot; Research Engineering &middot; ML Systems</small></p>
+    <p class="card-text"><a href="{{ featured.url | relative_url }}">Read the full case study &rarr;</a></p>
+  </div>
+</div>
+{% endif %}

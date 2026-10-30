@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Selected products and platforms I have led or built.
+description: Selected case studies from my work in AI research and engineering.
 nav: true
 nav_order: 2
 horizontal: true
