@@ -4,6 +4,14 @@ title: Audio-Driven Facial Animation & Neural Video Generation
 description: "Elai | Co-Founder, Principal Engineer & R&D Lead. Hands-on R&D of speech-driven facial animation and talking-head video generation, from research to production."
 importance: 1
 featured: true
+card_role: "Elai · Co-Founder / Principal Engineer / R&D Lead"
+card_paragraphs:
+  - "Led hands-on R&D of neural systems for speech-driven facial animation and realistic talking-head video generation."
+  - "Tackled expressive motion modeling, lip-sync evaluation and real-time neural rendering. Built production ML systems and led a small engineering team, combining model research with architecture and performance optimization."
+card_highlights:
+  - label: "Key results"
+    text: "300K+ avatar videos generated on the platform (2024-2026), production deployment of the developed models, and a real-time avatar MVP achieving 25+ FPS."
+card_focus: "Generative AI · Neural Rendering · Research Engineering · ML Systems"
 # Paste the YouTube video ID of the demo (the part after "v=" in the URL), e.g. dQw4w9WgXcQ.
 # While empty, the video block and the thumbnail on the home page are hidden.
 youtube_id:

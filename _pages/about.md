@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Head of AI Research at <a href="https://www.panopto.com/" target="_blank">Panopto</a>. Applied AI leader, ex-co-founder &amp; CRDO at <a href="https://elai.io/" target="_blank">Elai.io</a>.
+subtitle: Head of AI Research at <a href="https://www.panopto.com/" target="_blank">Panopto</a>. Applied AI leader, ex-co-founder &amp; Chief Research Officer at <a href="https://elai.io/" target="_blank">Elai.io</a>.
 
 profile:
   align: right
@@ -30,9 +30,10 @@ I enjoy the full path from research to production: choosing the right problems, 
 
 I'm currently open to **Head of AI / Applied AI Lead / Staff Research Engineer** roles and R&D leadership positions. Please feel free to get in touch!
 
-{% assign featured = site.projects | where: "featured", true | first %}
-{% if featured %}
-<h2 class="mt-4">Featured project</h2>
+{% assign featured_projects = site.projects | where: "featured", true | sort: "importance" %}
+{% if featured_projects.size > 0 %}
+<h2 class="mt-4">Featured projects</h2>
+{% for featured in featured_projects %}
 <div class="card hoverable mb-4" style="position: relative; display: flex; flex-direction: row; flex-wrap: wrap; overflow: hidden;">
   {% if featured.youtube_id %}
   <div style="flex: 1 1 280px; min-height: 180px;">
@@ -40,13 +41,17 @@ I'm currently open to **Head of AI / Applied AI Lead / Staff Research Engineer**
   </div>
   {% endif %}
   <div class="card-body" style="flex: 2 1 340px;">
-    <h3 class="card-title"><a href="{{ featured.url | relative_url }}" style="position: static;">{{ featured.title }}</a></h3>
-    <p class="card-text"><strong>Elai</strong> &middot; Co-Founder / Principal Engineer / R&amp;D Lead</p>
-    <p class="card-text">Led hands-on R&amp;D of neural systems for speech-driven facial animation and realistic talking-head video generation.</p>
-    <p class="card-text">Tackled expressive motion modeling, lip-sync evaluation and real-time neural rendering. Built production ML systems and led a small engineering team, combining model research with architecture and performance optimization.</p>
-    <p class="card-text"><strong>Key results:</strong> 300K+ avatar videos generated on the platform (2024-2026), production deployment of the developed models, and a real-time avatar MVP achieving 25+ FPS.</p>
-    <p class="card-text"><small>Focus: Generative AI &middot; Neural Rendering &middot; Research Engineering &middot; ML Systems</small></p>
+    <h3 class="card-title"><a href="{{ featured.url | relative_url }}" style="position: static;">{{ featured.card_title | default: featured.title }}</a></h3>
+    <p class="card-text"><strong>{{ featured.card_role }}</strong></p>
+    {% for paragraph in featured.card_paragraphs %}
+    <p class="card-text">{{ paragraph }}</p>
+    {% endfor %}
+    {% for highlight in featured.card_highlights %}
+    <p class="card-text"><strong>{{ highlight.label }}:</strong> {{ highlight.text }}</p>
+    {% endfor %}
+    <p class="card-text"><small>Focus: {{ featured.card_focus }}</small></p>
     <p class="card-text"><a href="{{ featured.url | relative_url }}">Read the full case study &rarr;</a></p>
   </div>
 </div>
+{% endfor %}
 {% endif %}
