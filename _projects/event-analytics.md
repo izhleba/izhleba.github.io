@@ -1,18 +1,17 @@
 ---
 layout: page
-title: High-Throughput Event Processing & Real-Time Analytics Platforms
+title: Data-Intensive Event Analytics & ML Data Platforms
 description: "Software Architect, Hands-on Technical Lead, 2017-2021. Distributed analytics platforms for fintech and gaming built on Kafka, ClickHouse, Cassandra and Greenplum."
 importance: 2
 featured: true
-card_title: High-Throughput Event Processing & Analytics Platforms
+card_title: Data-Intensive Event Analytics & ML Data Platforms
 card_role: "Software Architect / Technical Lead · 2017-2021"
 card_paragraphs:
-  - "Designed and implemented distributed analytics platforms for fintech and gaming applications, processing thousands of events per second with peaks in the tens of thousands."
-  - "Built scalable data pipelines using Kafka, ClickHouse, Cassandra, and Greenplum, with a focus on reliable event delivery, deduplication, data consistency, and high-performance analytical queries."
-  - "Combined hands-on development with architecture ownership and technical leadership."
+  - "Designed and built distributed analytics platforms for fintech and gaming on Kafka, ClickHouse, Cassandra, and Greenplum."
+  - "Focused on reliable event delivery, deduplication, data consistency, and fast analytical queries, combining hands-on development with architecture ownership and technical leadership."
 card_highlights:
-  - label: "Scale"
-    text: "Tens of TB of hot data · Hundreds of TB of historical data · Distributed processing infrastructure"
+  - label: "Key results"
+    text: "Cut recurring report time from tens of minutes to seconds · Sustained 1,000s of events/sec (peaks of 10,000s) on tens of TB of hot data"
 card_focus: "Distributed Systems · Data Engineering · System Architecture"
 ---
 
