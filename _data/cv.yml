@@ -1,10 +1,10 @@
 cv:
   name: Aleksei Pshenichnyi
-  label: Head of AI Research
+  label: AI/ML Research Engineer · Generative Video · Technical R&D Lead
   email: izhleba@gmail.com
   location: Barcelona, Spain
   image: ""
-  summary: Applied AI leader with 15+ years of experience in software, data engineering and machine learning. Leads AI research and R&D teams, taking ideas from research to production. Co-founded two companies, including the AI video avatar platform Elai.io.
+  summary: Hands-on AI/ML engineer and technology entrepreneur with 15+ years of software engineering experience, specializing in generative video, audio-driven facial animation, and applied machine learning. Co-founder of Elai, an AI video generation startup acquired by Panopto in 2024. Experienced in end-to-end ML research and engineering, from neural model development and evaluation to production deployment and real-time inference optimization. Combines deep technical expertise with R&D leadership and a strong background in distributed systems and production software architecture. Authorized to work in the EU.
 
   social_networks:
     - network: GitHub
@@ -13,96 +13,95 @@ cv:
       username: aleksei-pshenichniy-8bbb343b
 
   sections:
+    Skills:
+      - name: AI / ML
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, Deep Learning, Transformers, Convolutional Autoencoders, Generative Models, Computer Vision, LLM and Multimodal Model Applications"
+      - name: Specializations
+        icon: fa-solid fa-video
+        keywords: "Audio-Driven Facial Animation, Lip Synchronization, Neural Video Generation, Model Training, Evaluation Frameworks"
+      - name: Performance & Systems
+        icon: fa-solid fa-gauge-high
+        keywords: "Python, CUDA, Cython, Numba, JIT Optimization, Streaming Inference, Distributed Systems"
+      - name: Data Engineering
+        icon: fa-solid fa-database
+        keywords: "Kafka, ClickHouse, Cassandra, Greenplum, PostgreSQL, Scala, Java, Akka"
+      - name: Leadership
+        icon: fa-solid fa-people-group
+        keywords: "R&D Team Leadership, Research Planning, Technical Architecture, Mentoring"
+
     Experience:
       - company: Panopto
         position: Head of AI Research
         start_date: 2024-11
         end_date: present
-        summary: Lead AI research to drive innovation and keep Panopto's technology at the leading edge.
+        summary: Joined through Panopto's acquisition of Elai (October 2024). Lead R&D of the avatar video generation technology and new generative AI features, spending about 70% of my time hands-on on models, experiments and code.
         highlights:
-          - Lead AI research initiatives and develop new AI-powered product features.
-          - Oversee research projects from concept to implementation.
-          - Collaborate with cross-functional teams to align AI solutions with business goals.
-          - Mentor researchers and foster technical growth within the team.
+          - Developed and released a new generation of audio-driven facial animation models to production; platform users generated 300K+ avatar videos in 2024-2026.
+          - Researched expressive facial motion, addressing the over-smoothed articulation typical of supervised audio-to-animation models through training data design and architecture changes; integrated the results into the production models.
+          - Built and shipped to production an AI feature that generates animated visual content (charts) from text prompts or presentation slides, using LLMs to produce structured chart descriptions and multimodal models to interpret slides.
+          - Lead an R&D team of 4-5 engineers, combining research planning and technical architecture with direct implementation.
 
-      - company: Elai.io
-        position: Chief R&D Officer (Co-founder)
+      - company: Elai
+        position: Co-Founder, Chief R&D Officer (Hands-on Principal Engineer)
         start_date: 2021-05
         end_date: 2024-12
-        summary: Led research and development of AI video avatar technology - a text-to-video platform for fast and accessible creation of e-learning content.
+        summary: Co-founded Elai, an AI video generation startup acquired by Panopto in October 2024.
         highlights:
-          - Led R&D initiatives and managed the R&D team and projects.
-          - Collaborated with cross-functional departments across product, engineering and go-to-market.
-          - Drove company growth through advanced technology solutions.
+          - Architected and contributed hands-on to production neural systems for audio-driven facial animation and realistic talking-head video generation, using transformer-based models and convolutional autoencoders in PyTorch.
+          - Led a 4-5-person R&D team while personally developing ML components, running experiments and making technical architecture decisions.
+          - Established model training, experiment tracking and evaluation workflows combining automated metrics with structured human assessments and preference testing.
+          - Developed a streaming real-time avatar MVP (LLM, text-to-speech, animation, neural rendering) achieving 25+ FPS and about 2-3 seconds from the first audio chunk to the first generated frame; the performance optimizations were reused in the main product.
+          - Optimized performance-critical components with CUDA, Cython, Numba and JIT compilation.
 
       - company: Eidolon
-        position: Head of Analytics
+        position: Head of Analytics (part-time)
         start_date: 2021-01
         end_date: 2022-02
-        summary: Led development of a comprehensive analytics platform to enhance data-driven decision-making for mobile games.
+        summary: Designed and led development of an event analytics platform for mobile games.
         highlights:
-          - Led the development of the analytics platform.
-          - Designed data models and reporting tools.
-          - Managed data integration and processing workflows.
-          - Worked with game developers to provide data-driven insights.
+          - Designed the data models, processing workflows and reporting tools that turn user activity events into insights on engagement, conversion and product performance.
+          - Worked with game developers to apply the analytics in product decisions.
 
       - company: DataSpike
-        position: Technical Lead (Co-founder)
+        position: Technical Lead (Co-Founder)
         start_date: 2019-10
         end_date: 2021-01
-        summary: Led technical development of core machine learning systems and infrastructure, delivering NLP-driven solutions that improved operational efficiency for financial institutions in AML and KYC processes.
-        highlights:
-          - Conducted customer development interviews.
-          - Led research and development of an early-stage product.
-          - "Stack: Scala, Python, NLP, SPARQL."
+        summary: Co-founded an early-stage startup building NLP-driven solutions for AML and KYC processes in financial institutions; led its research and development (Scala, Python, NLP, SPARQL).
 
-      - company: Quadcode
-        position: Software Development (Data Engineer) Team Lead
+      - company: Quadcode (IQ Option)
+        position: Software Development (Data Engineering) Team Lead
         start_date: 2017-05
         end_date: 2019-10
-        summary: Led a software development team building data infrastructure for real-time analytics and machine learning.
+        summary: Architect and hands-on lead of the analytics and ML data platform behind the IQ Option fintech product.
         highlights:
-          - Developed an analytical data warehouse and data pipelines using Python, Scala, and Postgres.
-          - Built infrastructure for real-time analytics and machine learning with Scala and Akka.
-          - Optimized marketing purchases with machine learning algorithms in Python.
-          - Promoted a data-driven culture via lectures, presentations and workshops.
+          - Designed and built a distributed event analytics platform with reliable event delivery, deduplication and consistency verification; this platform and the later one at Eidolon sustained thousands of events per second (peaks of tens of thousands) on tens of TB of hot data.
+          - Cut recurring analytical reports from tens of minutes to seconds with pre-aggregations, partitioning and query plan optimization.
+          - Led ML systems built on the platform, including prediction of which new users become paying customers to optimize ad spend, fraud detection and trading news recommendations.
+          - Built real-time analytics and ML infrastructure with Scala and Akka and data pipelines with Python, Scala and Postgres.
 
       - company: Ice Owl
-        position: Software Developer
+        position: Software Developer (Backend & Game AI)
         start_date: 2010-10
         end_date: 2017-04
-        summary: Developed and optimized server-side software and game logic for multiplayer social games.
+        summary: Developed server-side game logic, multiplayer features and AI for social and strategy games in Scala and Java.
         highlights:
-          - Developed server-side game logic and multiplayer features in Scala and Java.
-          - Implemented AI components for games.
-          - Conducted data analysis to improve social game performance.
+          - Designed memory-efficient planning for autonomous agents in a multiplayer tactical strategy game, reducing precomputed data from an estimated tens of GB to about 100 MB per map and enabling around 1,000 AI agents across hundreds of concurrent sessions on a single server.
 
     Education:
       - institution: Computer Science Center
         location: Saint Petersburg, Russia
         area: Data Analysis
+        studyType: Evening postgraduate program (non-degree)
         start_date: 2014-09
         end_date: 2017-06
 
       - institution: Siberian Federal University
         location: Krasnoyarsk, Russia
         area: Computer Science
+        studyType: Specialist degree (5-year, MSc equivalent)
         start_date: 2004-09
         end_date: 2009-06
-
-    Skills:
-      - name: AI & Machine Learning
-        icon: fa-solid fa-brain
-        keywords: "Applied AI, Generative AI, Neural Networks, Deep Learning, AI Avatars, Text-to-Video, NLP, Machine Learning"
-      - name: Leadership
-        icon: fa-solid fa-people-group
-        keywords: "R&D Management, Team Building, Mentoring, Technical Strategy, Cross-functional Collaboration, Customer Development"
-      - name: Data Engineering
-        icon: fa-solid fa-database
-        keywords: "Data Warehousing, Data Pipelines, Real-time Analytics, PostgreSQL, Greenplum"
-      - name: Programming
-        icon: fa-solid fa-code
-        keywords: "Python, PyTorch, Scala, Java, Akka, SPARQL"
 
     Languages:
       - name: English

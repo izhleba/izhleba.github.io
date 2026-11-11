@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Head of AI Research at <a href="https://www.panopto.com/" target="_blank">Panopto</a>. Applied AI leader, ex-co-founder &amp; Chief Research Officer at <a href="https://elai.io/" target="_blank">Elai.io</a>.
+subtitle: Head of AI Research at <a href="https://www.panopto.com/" target="_blank">Panopto</a>. Applied AI leader, ex-co-founder &amp; Chief R&amp;D Officer at <a href="https://elai.io/" target="_blank">Elai.io</a>.
 
 profile:
   align: right

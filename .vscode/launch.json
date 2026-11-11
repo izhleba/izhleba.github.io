@@ -10,7 +10,9 @@
                 "--source",
                 "_data/cv.yml",
                 "--output",
-                "_data/.cv_rendercv.yml"
+                "_data/.cv_rendercv.yml",
+                "--design",
+                "assets/rendercv/design.yaml"
             ],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
