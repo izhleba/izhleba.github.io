@@ -25,9 +25,7 @@ I developed server-side AI for autonomous agents in a multiplayer tactical strat
 
 The game combined a persistent strategic world with online tactical combat sessions.
 
-My work involved designing autonomous agent behavior alongside developing server-side game logic and networking components.
-
-The main engineering challenge was enabling agents to make effective decisions in a complex simulated environment while supporting hundreds of concurrent game sessions on a single server.
+The main engineering challenge was enabling agents to plan by simulating the consequences of their actions while supporting hundreds of concurrent game sessions on a single server.
 
 ## Technical Challenge
 
@@ -39,13 +37,11 @@ However, exhaustive multi-step planning was computationally impractical because 
 
 Precomputing and reusing simulation results offered a way to reduce runtime computation, but storing the resulting data in a straightforward representation would have required tens of gigabytes of RAM per game map.
 
-This created a challenging tradeoff between planning capabilities, computational cost, memory consumption, and the accuracy of precomputed information.
+This created a tradeoff between planning capabilities, computational cost, memory consumption, and the accuracy of precomputed information.
 
 ## Engineering Approach
 
-I developed a memory-efficient approach to representing and reusing precomputed simulation data.
-
-The solution combined several techniques:
+I developed a memory-efficient way to represent and reuse precomputed simulation data, combining four techniques:
 
 - **Compact data representation:** Selecting efficient byte-level representations according to the characteristics and ranges of individual data types.
 - **Pattern clustering:** Identifying similar patterns in precomputed data and reducing redundancy.
@@ -54,13 +50,9 @@ The solution combined several techniques:
 
 Precomputation could take several hours, but the resulting data occupied approximately **100 MB per map**, making it practical to keep the necessary information in server memory.
 
-This enabled autonomous agents to reuse expensive simulation calculations during runtime decision-making without requiring exhaustive recalculation.
-
 ## Results
 
 The approach made it possible to run approximately **1,000 autonomous agents across hundreds of concurrent game sessions on a single game server**.
-
-The key achievement was making computationally expensive AI planning practical under real-world server resource constraints through algorithmic and data-representation optimizations.
 
 ## My Contribution
 
@@ -73,6 +65,4 @@ I worked as a hands-on backend and AI engineer, developing the autonomous agent 
 
 ## Engineering Takeaways
 
-This project was an early example of a recurring theme in my engineering work: solving difficult performance problems by reconsidering how computations and data are represented, rather than relying solely on additional hardware.
-
-It also gave me practical experience with classical AI planning, simulation-based decision-making, memory-efficient algorithms, and performance-critical server-side systems.
+**Rethink the representation before adding hardware.** This project was an early example of a recurring theme in my engineering work: solving difficult performance problems by reconsidering how computations and data are represented, rather than relying solely on additional hardware.

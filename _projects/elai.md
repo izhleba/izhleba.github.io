@@ -60,7 +60,7 @@ This manifested in several ways:
 - Emotional expressions were difficult to learn because of their high variability and uneven representation in training datasets.
 - Improvements in numerical objectives did not always translate into perceptually better animation.
 
-We investigated different approaches to addressing these limitations. Our research indicated that training data design and neural architecture improvements were more effective directions than relying primarily on additional loss functions or behavior-encouraging techniques.
+Our research indicated that training data design and neural architecture improvements were more effective directions than relying primarily on additional loss functions or behavior-encouraging techniques.
 
 The resulting improvements were integrated into the production models.
 
@@ -75,7 +75,7 @@ I helped establish a multi-layer evaluation process combining:
 - Fast automated measurements for experimental iteration.
 - Structured human assessments using formalized evaluation protocols.
 - Human-preference comparisons against competing solutions.
-- Comprehensive internal acceptance testing to evaluate artifacts and production readiness.
+- Internal acceptance testing to evaluate artifacts and production readiness.
 
 Our visual quality assessment covered a broad range of potential artifacts, including issues that can also occur in real-world video due to camera, lighting, or compression effects.
 
@@ -106,20 +106,11 @@ Although we eventually discontinued the standalone real-time avatar direction fo
 
 I served as a hands-on Principal Engineer and R&D Lead, working with a small cross-functional team of typically 4-5 engineers, including myself, 2-3 ML Engineers, and a Software Engineer.
 
-My responsibilities combined:
+My work spanned model research and training, system architecture and performance optimization, research planning and evaluation, training and experiment infrastructure, and leading the R&D team.
 
-- Neural model development, training, implementation, and experimentation.
-- Research into facial animation and generative video techniques.
-- Technical architecture and performance optimization.
-- Research planning, hypothesis formulation, and experimental evaluation.
-- Training infrastructure, experiment tracking, and evaluation workflows.
-- Technical leadership and coordination of the R&D team.
-
-Our primary development stack included Python and PyTorch, with performance-critical components optimized using native code, CUDA, Cython, Numba, and JIT compilation where appropriate.
+Our primary development stack included Python and PyTorch, with performance-critical components optimized using native code, CUDA, Cython, Numba, and JIT compilation.
 
 ## Engineering Takeaways
-
-Three principles shaped my approach throughout this work:
 
 **Understand the learning problem before optimizing the objective.** Data ambiguity and dataset composition can limit model performance more fundamentally than the choice of loss function.
 
@@ -127,4 +118,4 @@ Three principles shaped my approach throughout this work:
 
 **Optimize the whole system, not just the model.** Streaming architecture, computational tradeoffs, and targeted bottleneck optimization can be as important as model-level improvements.
 
-This project reflects the kind of engineering I enjoy most: working on difficult ML problems, designing experiments, building production-ready systems, and taking technical ownership from research to deployment.
+This is the kind of engineering I enjoy most: taking difficult ML problems from research to production.

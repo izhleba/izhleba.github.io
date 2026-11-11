@@ -25,7 +25,7 @@ Between 2017 and 2021, I designed and developed two large-scale analytics platfo
 
 Both systems focused on collecting and analyzing user activity events, including installations, application launches, onboarding flows, sessions, payments, and other interactions.
 
-The goal was to transform large volumes of behavioral data into actionable insights about user engagement, application performance, conversion, and product improvement opportunities.
+The goal was to turn large volumes of behavioral data into insights about user engagement, application performance, conversion, and product improvement opportunities.
 
 The platforms operated at substantial scale:
 
@@ -33,7 +33,7 @@ The platforms operated at substantial scale:
 - **Tens of terabytes of hot data** and hundreds of terabytes of historical data.
 - Distributed, multi-server infrastructure designed for horizontal scaling.
 
-My responsibilities combined system architecture, hands-on backend development, infrastructure engineering, and technical leadership.
+Both platforms have continued operating and evolving beyond my original development work.
 
 ## Architecture & Data Processing
 
@@ -41,100 +41,52 @@ One of the platforms used a distributed event-processing architecture built arou
 
 The processing pipeline consisted of several layers:
 
-**1. Event Ingestion**
+1. **Event ingestion.** Multiple ingestion services received events from client applications, performed initial filtering, and forwarded data into Kafka as the central event transport layer.
+2. **Parallel event processing.** Independent processing services consumed and enriched incoming events, performing operations such as geographic segmentation and associating device fingerprints with user identities.
+3. **Specialized storage.** Different storage engines were selected according to their workload characteristics:
 
-Multiple ingestion services received events from client applications, performed initial filtering, and forwarded data into Kafka as the central event transport layer.
+   - **ClickHouse:** fast analytical queries and operational reporting.
+   - **Cassandra:** event storage for workloads requiring strong durability and delivery-reliability mechanisms.
+   - **Greenplum:** large-scale historical data storage, complex analytical queries, and multidimensional aggregations.
 
-**2. Parallel Event Processing**
-
-Independent processing services consumed and enriched incoming events, performing operations such as geographic segmentation and associating device fingerprints with user identities.
-
-**3. Specialized Storage**
-
-Different storage engines were selected according to their workload characteristics:
-
-- **ClickHouse:** fast analytical queries and operational reporting.
-- **Cassandra:** event storage for workloads requiring strong durability and delivery-reliability mechanisms.
-- **Greenplum:** large-scale historical data storage, complex analytical queries, and multidimensional aggregations.
-
-Additional ETL, consistency verification, and security layers supported the overall architecture.
+The architecture also included ETL, consistency-verification, and security layers.
 
 ## Engineering Challenge 1: Data Reliability and Deduplication
 
-Preventing undetected data loss and controlling duplicate processing were among the most important system requirements.
+Preventing undetected data loss and controlling duplicate processing were among the most important system requirements, so we built reliability mechanisms into every layer:
 
-We implemented reliability mechanisms across multiple layers.
+- **Client applications:** unique event identifiers and sequence counters, with local buffering for temporary connectivity problems. Gaps in the sequences revealed missing events.
+- **Internal event producers:** log sequence numbers (LSNs) and record hashing to track data consistency.
+- **Backend processing:** redundant distributed storage and Kafka's at-least-once delivery, with deduplication at the database layer. Early versions used a custom Greenplum UPSERT, built before equivalent functionality became officially available.
+- **Consistency verification:** background processes that used checksums and LSN-based markers to find discrepancies between data sources.
 
-**Client-side reliability**
-
-Client applications assigned unique event identifiers and sequence counters. Local buffering helped handle temporary connectivity problems, while gaps in event sequences provided a mechanism for detecting missing events.
-
-**Internal event producers**
-
-For events originating from internal services, we used mechanisms based on log sequence numbers (LSNs) and record hashing to track data consistency.
-
-**Backend processing**
-
-The backend used redundant distributed storage and Kafka's at-least-once delivery semantics, combined with deduplication at the database layer.
-
-In early versions, we implemented a custom UPSERT mechanism for Greenplum before equivalent functionality became officially available.
-
-**Consistency verification**
-
-Dedicated background processes used checksums and LSN-based markers to identify discrepancies between data sources.
-
-The system was designed around explicit failure detection, durable processing, and reconciliation rather than assuming that individual infrastructure components could guarantee end-to-end exactly-once processing.
+The system relied on explicit failure detection, durable processing, and reconciliation rather than assuming that individual infrastructure components could guarantee end-to-end exactly-once processing.
 
 ## Engineering Challenge 2: Flexible Analytics at Scale
 
-A major requirement was supporting both exploratory analytics and fast recurring reports over large datasets.
+The platforms had to support both exploratory analytics and fast recurring reports. Greenplum handled complex workloads over large raw-data tables, joins, and multidimensional analysis, but queries over raw historical data could take tens of minutes. Once recurring analytical patterns were identified, we optimized for them:
 
-Greenplum was used for complex analytical workloads involving large raw-data tables, joins, and multidimensional analysis.
+- **Pre-aggregation:** intermediate pre-aggregations, OLAP-style data structures, and workload-specific data organization.
+- **Table design:** partitioning strategies and distribution keys chosen for parallel query execution.
+- **Query tuning:** execution plan analysis and bottleneck identification.
+- **Operational reporting:** ClickHouse served fast reports for selected event types.
 
-Exploratory ad hoc queries could take tens of minutes when operating directly on large volumes of historical data.
-
-Once recurring analytical patterns were identified, we introduced intermediate pre-aggregations and OLAP-style data structures.
-
-This allowed frequently used analytical reports to execute in seconds rather than repeatedly scanning and joining large raw datasets.
-
-Key optimization techniques included:
-
-- Carefully designed table partitioning strategies.
-- Distribution key selection for parallel query execution.
-- Query execution plan analysis and bottleneck identification.
-- Pre-aggregation and workload-specific data organization.
-
-ClickHouse complemented this approach by supporting fast operational reporting for selected event types.
+Frequently used reports ran in seconds instead of repeatedly scanning and joining large raw datasets.
 
 ## Engineering Challenge 3: Horizontal Scalability
 
-The platforms needed to accommodate growth in both incoming event traffic and accumulated historical data.
+The platforms had to absorb growth in both event traffic and historical data, so the architecture scaled along two largely independent dimensions:
 
-We designed the architecture to scale along two largely independent dimensions:
-
-- **Processing throughput:** adding processing instances to handle increased event traffic.
-- **Storage capacity:** expanding distributed storage infrastructure as data volumes increased.
-
-This separation helped the systems evolve alongside growing business and analytical requirements.
-
-Both platforms have continued operating and evolving beyond my original development work.
+- **Processing throughput:** adding processing instances as event traffic grew.
+- **Storage capacity:** expanding distributed storage as data volumes increased.
 
 ## My Role & Technical Ownership
 
 I was responsible for system architecture and technical development leadership while remaining directly involved in implementation.
 
-My contributions included:
-
-- Designing distributed data-processing and storage architectures.
-- Implementing backend services and selected data-processing components.
-- Configuring and integrating databases and event-streaming infrastructure.
-- Designing reliability, deduplication, and consistency verification mechanisms.
-- Analyzing and optimizing analytical queries.
-- Coordinating engineering work and managing developers involved in the projects.
+My work spanned distributed data-processing and storage architecture, backend services, database and event-streaming infrastructure, reliability and consistency mechanisms, query optimization, and managing the development team.
 
 ## Engineering Takeaways
-
-These projects reinforced several principles that continue to shape my engineering approach:
 
 **Reliability must be designed end-to-end.** Message delivery guarantees alone are insufficient without event identity, failure detection, deduplication, and consistency verification.
 
@@ -142,4 +94,4 @@ These projects reinforced several principles that continue to shape my engineeri
 
 **Scalability and query performance require different strategies.** Scaling event ingestion, expanding storage capacity, and optimizing analytical queries are related but distinct engineering challenges.
 
-This experience established a strong foundation in distributed systems, data-intensive applications, performance optimization, and production software architecture, skills I continue to apply in AI/ML engineering.
+I continue to apply this experience in distributed systems, data-intensive applications, performance optimization, and production software architecture to AI/ML engineering.
