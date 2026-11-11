@@ -22,7 +22,7 @@ cv:
         keywords: "Audio-Driven Facial Animation, Lip Sync, Neural Video Generation, Model Training, Evaluation Frameworks"
       - name: Performance & Systems
         icon: fa-solid fa-gauge-high
-        keywords: "Python, CUDA, Cython, Numba, JIT, Streaming Inference, Distributed Systems"
+        keywords: "Python, CUDA, Cython, Numba, Streaming Inference, Distributed Systems"
       - name: Data Engineering
         icon: fa-solid fa-database
         keywords: "Python, Scala, Java, Kafka, Cassandra, Greenplum, PostgreSQL"
