@@ -25,7 +25,7 @@ cv:
         keywords: "Python, CUDA, Cython, Numba, JIT, Streaming Inference, Distributed Systems"
       - name: Data Engineering
         icon: fa-solid fa-database
-        keywords: "Kafka, Cassandra, Greenplum, PostgreSQL, Scala, Java, Akka"
+        keywords: "Python, Scala, Java, Kafka, Cassandra, Greenplum, PostgreSQL"
       - name: Leadership
         icon: fa-solid fa-people-group
         keywords: "R&D Team Leadership, Research Planning, Technical Architecture"
@@ -55,7 +55,7 @@ cv:
           - Optimized critical paths with CUDA, Cython, Numba and JIT compilation.
 
       - company: Eidolon
-        position: Head of Analytics (part-time)
+        position: Head of Analytics
         start_date: 2021-01
         end_date: 2022-02
         summary: Designed and led development of an event analytics platform for mobile games, covering data models, processing and reporting.
@@ -81,15 +81,16 @@ cv:
         position: Software Developer (Backend & Game AI)
         start_date: 2010-10
         end_date: 2017-04
-        summary: Server-side game logic, multiplayer features and AI for social and strategy games in Scala and Java.
+        summary: Backend and AI for multiplayer social and strategy games in Scala and Java.
         highlights:
-          - Designed memory-efficient planning for autonomous game agents, cutting precomputed data from an estimated tens of GB to about 100 MB per map and running around 1,000 agents across hundreds of concurrent sessions on one server.
+          - Developed server-side game logic and game network protocols.
+          - Designed memory-efficient planning for game AI agents, using about 100 MB of precomputed data per map instead of tens of GB and running around 1,000 agents on one server.
 
     Education:
       - institution: Computer Science Center
         location: Saint Petersburg, Russia
         area: Data Analysis
-        studyType: Evening postgraduate program (non-degree)
+        studyType: Diploma, evening program
         start_date: 2014-09
         end_date: 2017-06
 
