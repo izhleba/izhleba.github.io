@@ -29,7 +29,7 @@ cv:
         keywords: "Python, Scala, Java, Kafka, Cassandra, Greenplum, PostgreSQL"
       - name: Leadership
         icon: fa-solid fa-people-group
-        keywords: "R&D Team Leadership, Research Planning, Technical Architecture"
+        keywords: "R&D Team Leadership, Research Planning, Technical Architecture, Agentic Development"
 
     Experience:
       - company: Panopto
@@ -41,6 +41,7 @@ cv:
           - Released a new generation of audio-driven facial animation models to production; users generated 300K+ avatar videos in 2024-2026.
           - Fixed over-smoothed articulation in audio-to-animation models through training data design and architecture changes, now in production.
           - Shipped a feature that generates animated charts from text prompts or slides, using LLMs for structured chart descriptions and multimodal models to read slides.
+          - Introduced an agentic development process in the R&D team, speeding up product feature delivery and increasing the number of research hypotheses tested.
           - Lead an R&D team of 4-5 engineers.
 
       - company: Elai
