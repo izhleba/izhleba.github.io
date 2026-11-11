@@ -40,7 +40,7 @@ I'm currently open to **Head of AI / Applied AI Lead / Staff Research Engineer**
 {% if featured_projects.size > 0 %}
 <h2 class="mt-4">Featured projects</h2>
 {% for featured in featured_projects %}
-<div class="card hoverable mb-4" style="position: relative; display: flex; flex-direction: row; flex-wrap: wrap; overflow: hidden;">
+<div class="card hoverable mb-4 about-featured" style="position: relative; display: flex; flex-direction: row; flex-wrap: wrap; overflow: hidden;">
   {% if featured.youtube_id %}
   <div style="flex: 1 1 280px; min-height: 180px;">
     <img src="https://img.youtube.com/vi/{{ featured.youtube_id }}/hqdefault.jpg" alt="Video preview: {{ featured.title }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">

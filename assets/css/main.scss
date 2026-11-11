@@ -33,3 +33,14 @@
 @use "tabs";
 @use "teachings";
 @use "typograms";
+
+// Featured project cards on the home page: same typography as the bio text
+.about-featured .card-text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.about-featured .card-text small {
+  font-size: 0.875rem;
+}
