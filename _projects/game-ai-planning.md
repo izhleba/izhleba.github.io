@@ -12,10 +12,12 @@ card_paragraphs:
 card_highlights:
   - label: "Key results"
     text: "Reduced precomputed data requirements from an estimated tens of gigabytes to approximately <strong>100 MB per map</strong>, enabling around <strong>1,000 AI agents across hundreds of concurrent sessions</strong> on a single game server."
+card_image: /assets/img/game-ai-planning-card.jpg
+card_image_alt: "Game logo"
 card_focus: "Classical AI · Search Algorithms · Simulation · Memory Optimization"
 ---
 
-**2010-2014 | Backend & AI Engineer**
+**2010-2014 · Backend & AI Engineer**
 
 *Classical AI · Search Algorithms · Simulation · Data Compression · Performance Engineering*
 
@@ -24,6 +26,13 @@ card_focus: "Classical AI · Search Algorithms · Simulation · Memory Optimizat
 I developed server-side AI for autonomous agents in a multiplayer tactical strategy game inspired by classic turn-based tactical games such as UFO and Jagged Alliance.
 
 The game combined a persistent strategic world with online tactical combat sessions.
+
+<div style="margin: 1.5rem 0 0.5rem;">
+  <img src="{{ '/assets/img/game-ai-planning.jpg' | relative_url }}" alt="Tactical combat screenshots from the multiplayer strategy game" style="width: 100%; height: auto; display: block;">
+</div>
+<div class="caption">
+  Tactical combat sessions in the game.
+</div>
 
 The main engineering challenge was enabling agents to plan by simulating the consequences of their actions while supporting hundreds of concurrent game sessions on a single server.
 

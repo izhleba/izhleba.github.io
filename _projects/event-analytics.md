@@ -1,21 +1,23 @@
 ---
 layout: page
-title: Data-Intensive Event Analytics & ML Data Platforms
-description: "Software Architect, Hands-on Technical Lead, 2017-2021. Distributed analytics platforms for fintech and gaming built on Kafka, ClickHouse, Cassandra and Greenplum."
+title: Data-Intensive Event Analytics & ML Platforms
+description: "Software Architect, Hands-on Technical Lead, 2017-2021. Distributed analytics and ML platforms for fintech and gaming built on Kafka, ClickHouse, Cassandra and Greenplum."
 importance: 2
 featured: true
-card_title: Data-Intensive Event Analytics & ML Data Platforms
+card_title: Data-Intensive Event Analytics & ML Platforms
 card_role: "Software Architect / Technical Lead · 2017-2021"
 card_paragraphs:
   - "Designed and built distributed analytics platforms for fintech and gaming on Kafka, ClickHouse, Cassandra, and Greenplum."
-  - "Focused on reliable event delivery, deduplication, data consistency, and fast analytical queries, combining hands-on development with architecture ownership and technical leadership."
+  - "Focused on reliable event delivery, deduplication, and fast analytical queries. Led the ML systems built on top of the platform: predicting which new users will become paying customers to optimize ad spend, fraud detection, and trading news recommendations."
 card_highlights:
   - label: "Key results"
     text: "Cut recurring report time from tens of minutes to seconds · Sustained 1,000s of events/sec (peaks of 10,000s) on tens of TB of hot data"
-card_focus: "Distributed Systems · Data Engineering · System Architecture"
+card_image: /assets/img/event-analytics-architecture.jpg
+card_image_alt: "Event analytics platform architecture diagram"
+card_focus: "Distributed Systems · Data Engineering · Applied ML · System Architecture"
 ---
 
-**2017-2021 | Software Architect, Hands-on Technical Lead**
+**2017-2021 · Software Architect, Hands-on Technical Lead**
 
 *Distributed Systems · Data Engineering · Event Streaming · OLAP · Backend Architecture*
 
@@ -26,6 +28,8 @@ Between 2017 and 2021, I designed and developed two large-scale analytics platfo
 Both systems focused on collecting and analyzing user activity events, including installations, application launches, onboarding flows, sessions, payments, and other interactions.
 
 The goal was to turn large volumes of behavioral data into insights about user engagement, application performance, conversion, and product improvement opportunities.
+
+The collected data also became the foundation for production machine learning systems (see below).
 
 The platforms operated at substantial scale:
 
@@ -38,6 +42,13 @@ Both platforms have continued operating and evolving beyond my original developm
 ## Architecture & Data Processing
 
 One of the platforms used a distributed event-processing architecture built around Apache Kafka.
+
+<div style="margin: 1.5rem 0 0.5rem;">
+  <img src="{{ '/assets/img/event-analytics-architecture.jpg' | relative_url }}" alt="Event analytics platform architecture: Kafka data bus, Scala event services, Spark Streaming, Greenplum, ClickHouse, Airflow, Redash, monitoring" style="width: 100%; height: auto; display: block;">
+</div>
+<div class="caption">
+  Simplified architecture of the event analytics platform.
+</div>
 
 The processing pipeline consisted of several layers:
 
@@ -80,11 +91,19 @@ The platforms had to absorb growth in both event traffic and historical data, so
 - **Processing throughput:** adding processing instances as event traffic grew.
 - **Storage capacity:** expanding distributed storage as data volumes increased.
 
+## Machine Learning on Top of the Platform
+
+The platform's data powered several production ML systems, which I led as team lead.
+
+**Paying-user prediction for ad traffic optimization.** The model estimated how likely a new user was to become a paying customer, based on early behavioral signals in the app. These predictions were used to optimize advertising traffic. I took part in the full ML cycle hands-on: data collection and processing, training gradient boosted tree models, production deployment, and evaluation in production. Features and predictions were computed offline in batches, with about one hour of lag.
+
+**Fraud detection and a trading news recommender.** I led the development of a fraud detection system and a trading news recommender, setting the technical direction and working closely with the engineers who implemented them.
+
 ## My Role & Technical Ownership
 
-I was responsible for system architecture and technical development leadership while remaining directly involved in implementation.
+I was responsible for system architecture and technical leadership of the development and ML teams while remaining directly involved in implementation.
 
-My work spanned distributed data-processing and storage architecture, backend services, database and event-streaming infrastructure, reliability and consistency mechanisms, query optimization, and managing the development team.
+My work spanned distributed data-processing and storage architecture, backend services, database and event-streaming infrastructure, reliability and consistency mechanisms, query optimization, and the full ML cycle of the paying-user prediction model.
 
 ## Engineering Takeaways
 
@@ -93,5 +112,7 @@ My work spanned distributed data-processing and storage architecture, backend se
 **Storage architecture should reflect workload requirements.** Different analytical and operational workloads benefit from different storage models rather than a single universal database.
 
 **Scalability and query performance require different strategies.** Scaling event ingestion, expanding storage capacity, and optimizing analytical queries are related but distinct engineering challenges.
+
+**Data quality determines ML quality.** Event identity, deduplication, and reconciliation mattered as much for training data as for reporting.
 
 I continue to apply this experience in distributed systems, data-intensive applications, performance optimization, and production software architecture to AI/ML engineering.

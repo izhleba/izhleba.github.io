@@ -11,13 +11,15 @@ card_paragraphs:
 card_highlights:
   - label: "Key results"
     text: "300K+ avatar videos generated on the platform (2024-2026), production deployment of the developed models, and a real-time avatar MVP achieving 25+ FPS."
+card_image: /assets/img/elai-avatar.png
+card_image_alt: "Frame from an AI avatar video generated on the Elai platform"
 card_focus: "Generative AI · Neural Rendering · Research Engineering · ML Systems"
 # Paste the YouTube video ID of the demo (the part after "v=" in the URL), e.g. dQw4w9WgXcQ.
 # While empty, the video block and the thumbnail on the home page are hidden.
 youtube_id:
 ---
 
-**2021-2026 | Co-Founder, Principal Engineer & R&D Lead**
+**2021-2026 · Co-Founder, Principal Engineer & R&D Lead**
 
 *Generative AI · Deep Learning · Neural Rendering · Real-Time ML Systems*
 
@@ -31,6 +33,15 @@ We developed a two-stage generation pipeline:
 - **Animation-to-Video:** generating realistic avatar videos driven by the predicted facial motion.
 
 These technologies were deployed in Elai's production platform, where users generated over 300,000 avatar videos between 2024 and 2026.
+
+{% if page.card_image %}
+<div style="margin: 1.5rem 0 0.5rem;">
+  <img src="{{ page.card_image | relative_url }}" alt="{{ page.card_image_alt }}" style="width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+</div>
+<div class="caption">
+  A frame from an avatar video generated on the Elai platform.
+</div>
+{% endif %}
 
 {% if page.youtube_id %}
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0 0.5rem;">

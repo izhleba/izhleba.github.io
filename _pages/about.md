@@ -39,6 +39,10 @@ I'm currently open to **Head of AI / Applied AI Lead / Staff Research Engineer**
   <div style="flex: 1 1 280px; min-height: 180px;">
     <img src="https://img.youtube.com/vi/{{ featured.youtube_id }}/hqdefault.jpg" alt="Video preview: {{ featured.title }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
   </div>
+  {% elsif featured.card_image %}
+  <div style="flex: 0 0 300px; max-width: 100%; align-self: center;">
+    <img src="{{ featured.card_image | relative_url }}" alt="{{ featured.card_image_alt | default: featured.title }}" style="width: 100%; height: auto; display: block;">
+  </div>
   {% endif %}
   <div class="card-body" style="flex: 2 1 340px;">
     <h3 class="card-title"><a href="{{ featured.url | relative_url }}" style="position: static;">{{ featured.card_title | default: featured.title }}</a></h3>
