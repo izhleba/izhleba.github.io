@@ -22,7 +22,7 @@ latest_posts:
   enabled: false
 ---
 
-<div class="about-bio" markdown="1" style="overflow: hidden;">
+<div class="about-bio" markdown="1" style="overflow: hidden; text-align: justify; hyphens: none; padding-right: 1.5rem;">
 
 Hi! I'm Aleksei, an applied AI leader with 15+ years in software, data and machine learning. I currently lead AI research at [Panopto](https://www.panopto.com/), where I turn research ideas into product features used by learning and enterprise video customers.
 
