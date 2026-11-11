@@ -22,6 +22,8 @@ latest_posts:
   enabled: false
 ---
 
+<div class="about-bio" markdown="1" style="overflow: hidden;">
+
 Hi! I'm Aleksei, an applied AI leader with 15+ years in software, data and machine learning. I currently lead AI research at [Panopto](https://www.panopto.com/), where I turn research ideas into product features used by learning and enterprise video customers.
 
 Before that, I co-founded [Elai.io](https://elai.io/) and served as its Chief R&D Officer. There, I led the research and engineering of AI video avatar technology: a text-to-video platform that makes creating e-learning content fast and accessible. Earlier, I led the development of analytics platforms at IQOption (fintech) and Eidolon (mobile games), and built real-time data and machine learning infrastructure in Scala and Python.
@@ -29,6 +31,10 @@ Before that, I co-founded [Elai.io](https://elai.io/) and served as its Chief R&
 I enjoy the full path from research to production: choosing the right problems, building and mentoring research and engineering teams, and shipping AI that creates measurable business value. My interests include generative AI for video and avatars, NLP, and data-driven product development.
 
 I'm currently open to **Head of AI / Applied AI Lead / Staff Research Engineer** roles and R&D leadership positions. Please feel free to get in touch!
+
+</div>
+
+<div style="clear: both;"></div>
 
 {% assign featured_projects = site.projects | where: "featured", true | sort: "importance" %}
 {% if featured_projects.size > 0 %}
