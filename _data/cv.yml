@@ -4,7 +4,7 @@ cv:
   email: izhleba@gmail.com
   location: Barcelona, Spain
   image: ""
-  summary: Hands-on AI/ML engineer and technology entrepreneur with 15+ years of software engineering experience, specializing in generative video, audio-driven facial animation, and applied machine learning. Co-founder of Elai, an AI video generation startup acquired by Panopto in 2024. Experienced in end-to-end ML research and engineering, from neural model development and evaluation to production deployment and real-time inference optimization. Combines deep technical expertise with R&D leadership and a strong background in distributed systems and production software architecture. Authorized to work in the EU.
+  summary: Hands-on AI/ML engineer with 15+ years in software, specializing in generative video and audio-driven facial animation. Co-founder of Elai, an AI video startup acquired by Panopto in 2024. Works end to end, from model research and evaluation to production deployment and real-time inference, with a background in distributed systems. Authorized to work in the EU.
 
   social_networks:
     - network: GitHub
@@ -16,77 +16,74 @@ cv:
     Skills:
       - name: AI / ML
         icon: fa-solid fa-brain
-        keywords: "PyTorch, Deep Learning, Transformers, Convolutional Autoencoders, Generative Models, Computer Vision, LLM and Multimodal Model Applications"
+        keywords: "PyTorch, Transformers, Convolutional Autoencoders, Generative Models, Computer Vision, LLMs, Multimodal Models"
       - name: Specializations
         icon: fa-solid fa-video
-        keywords: "Audio-Driven Facial Animation, Lip Synchronization, Neural Video Generation, Model Training, Evaluation Frameworks"
+        keywords: "Audio-Driven Facial Animation, Lip Sync, Neural Video Generation, Model Training, Evaluation Frameworks"
       - name: Performance & Systems
         icon: fa-solid fa-gauge-high
-        keywords: "Python, CUDA, Cython, Numba, JIT Optimization, Streaming Inference, Distributed Systems"
+        keywords: "Python, CUDA, Cython, Numba, JIT, Streaming Inference, Distributed Systems"
       - name: Data Engineering
         icon: fa-solid fa-database
-        keywords: "Kafka, ClickHouse, Cassandra, Greenplum, PostgreSQL, Scala, Java, Akka"
+        keywords: "Kafka, Cassandra, Greenplum, PostgreSQL, Scala, Java, Akka"
       - name: Leadership
         icon: fa-solid fa-people-group
-        keywords: "R&D Team Leadership, Research Planning, Technical Architecture, Mentoring"
+        keywords: "R&D Team Leadership, Research Planning, Technical Architecture"
 
     Experience:
       - company: Panopto
         position: Head of AI Research
         start_date: 2024-11
         end_date: present
-        summary: Joined through Panopto's acquisition of Elai (October 2024). Lead R&D of the avatar video generation technology and new generative AI features, spending about 70% of my time hands-on on models, experiments and code.
+        summary: Joined through the acquisition of Elai. Lead avatar video generation R&D and new generative AI features; about 70% hands-on.
         highlights:
-          - Developed and released a new generation of audio-driven facial animation models to production; platform users generated 300K+ avatar videos in 2024-2026.
-          - Researched expressive facial motion, addressing the over-smoothed articulation typical of supervised audio-to-animation models through training data design and architecture changes; integrated the results into the production models.
-          - Built and shipped to production an AI feature that generates animated visual content (charts) from text prompts or presentation slides, using LLMs to produce structured chart descriptions and multimodal models to interpret slides.
-          - Lead an R&D team of 4-5 engineers, combining research planning and technical architecture with direct implementation.
+          - Released a new generation of audio-driven facial animation models to production; users generated 300K+ avatar videos in 2024-2026.
+          - Fixed over-smoothed articulation in audio-to-animation models through training data design and architecture changes, now in production.
+          - Shipped a feature that generates animated charts from text prompts or slides, using LLMs for structured chart descriptions and multimodal models to read slides.
+          - Lead an R&D team of 4-5 engineers.
 
       - company: Elai
         position: Co-Founder, Chief R&D Officer (Hands-on Principal Engineer)
         start_date: 2021-05
         end_date: 2024-12
-        summary: Co-founded Elai, an AI video generation startup acquired by Panopto in October 2024.
+        summary: AI video generation startup, acquired by Panopto in October 2024.
         highlights:
-          - Architected and contributed hands-on to production neural systems for audio-driven facial animation and realistic talking-head video generation, using transformer-based models and convolutional autoencoders in PyTorch.
-          - Led a 4-5-person R&D team while personally developing ML components, running experiments and making technical architecture decisions.
-          - Established model training, experiment tracking and evaluation workflows combining automated metrics with structured human assessments and preference testing.
-          - Developed a streaming real-time avatar MVP (LLM, text-to-speech, animation, neural rendering) achieving 25+ FPS and about 2-3 seconds from the first audio chunk to the first generated frame; the performance optimizations were reused in the main product.
-          - Optimized performance-critical components with CUDA, Cython, Numba and JIT compilation.
+          - Built production neural systems for audio-driven facial animation and talking-head video generation with transformer-based models and convolutional autoencoders in PyTorch.
+          - Led a 4-5-person R&D team while developing models and running experiments myself.
+          - Set up training, experiment tracking and evaluation combining automated metrics with structured human assessments and preference tests.
+          - Built a streaming real-time avatar MVP (LLM, TTS, animation, neural rendering) at 25+ FPS, with 2-3 seconds from first audio chunk to first frame.
+          - Optimized critical paths with CUDA, Cython, Numba and JIT compilation.
 
       - company: Eidolon
         position: Head of Analytics (part-time)
         start_date: 2021-01
         end_date: 2022-02
-        summary: Designed and led development of an event analytics platform for mobile games.
-        highlights:
-          - Designed the data models, processing workflows and reporting tools that turn user activity events into insights on engagement, conversion and product performance.
-          - Worked with game developers to apply the analytics in product decisions.
+        summary: Designed and led development of an event analytics platform for mobile games, covering data models, processing and reporting.
 
       - company: DataSpike
         position: Technical Lead (Co-Founder)
         start_date: 2019-10
         end_date: 2021-01
-        summary: Co-founded an early-stage startup building NLP-driven solutions for AML and KYC processes in financial institutions; led its research and development (Scala, Python, NLP, SPARQL).
+        summary: Led R&D of an early-stage NLP product for AML and KYC in financial institutions (Scala, Python, SPARQL).
 
       - company: Quadcode (IQ Option)
         position: Software Development (Data Engineering) Team Lead
         start_date: 2017-05
         end_date: 2019-10
-        summary: Architect and hands-on lead of the analytics and ML data platform behind the IQ Option fintech product.
+        summary: Architect and hands-on lead of the analytics and ML data platform for the IQ Option fintech product.
         highlights:
-          - Designed and built a distributed event analytics platform with reliable event delivery, deduplication and consistency verification; this platform and the later one at Eidolon sustained thousands of events per second (peaks of tens of thousands) on tens of TB of hot data.
-          - Cut recurring analytical reports from tens of minutes to seconds with pre-aggregations, partitioning and query plan optimization.
-          - Led ML systems built on the platform, including prediction of which new users become paying customers to optimize ad spend, fraud detection and trading news recommendations.
-          - Built real-time analytics and ML infrastructure with Scala and Akka and data pipelines with Python, Scala and Postgres.
+          - Built a distributed event analytics platform with reliable delivery, deduplication and consistency checks; this platform and the later one at Eidolon handled thousands of events per second (peaks of tens of thousands) on tens of TB of hot data.
+          - Cut recurring reports from tens of minutes to seconds with pre-aggregation, partitioning and query plan optimization.
+          - Led ML systems on the platform, covering paying-user prediction for ad spend, fraud detection and trading news recommendations.
+          - Built real-time analytics infrastructure with Scala and Akka and pipelines with Python, Scala and Postgres.
 
       - company: Ice Owl
         position: Software Developer (Backend & Game AI)
         start_date: 2010-10
         end_date: 2017-04
-        summary: Developed server-side game logic, multiplayer features and AI for social and strategy games in Scala and Java.
+        summary: Server-side game logic, multiplayer features and AI for social and strategy games in Scala and Java.
         highlights:
-          - Designed memory-efficient planning for autonomous agents in a multiplayer tactical strategy game, reducing precomputed data from an estimated tens of GB to about 100 MB per map and enabling around 1,000 AI agents across hundreds of concurrent sessions on a single server.
+          - Designed memory-efficient planning for autonomous game agents, cutting precomputed data from an estimated tens of GB to about 100 MB per map and running around 1,000 agents across hundreds of concurrent sessions on one server.
 
     Education:
       - institution: Computer Science Center
